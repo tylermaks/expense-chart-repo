@@ -1,0 +1,59 @@
+//VARIABLES
+$ltRed:hsl(10, 79%, 65%);
+$cyan:hsl(186, 34%, 60%);
+$dkBrown:hsl(25, 47%, 15%);
+$mdBrown:hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$ltOrange: hsl(33, 100%, 98%);
+
+//SETUP
+*, *::after, *::before{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body, .App{
+  height: 100vh;
+  width: 100%;
+}
+
+body{
+  background-color: $cream;
+  font-family: "DM Sans", sans-serif;
+}
+
+section{
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  margin:0 auto;
+}
+
+//APP COMPONENT
+.App{
+  padding: 1.5rem;
+
+}
+
+//BALANCE COMPONENT
+.balance-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $ltRed;
+  color: $ltOrange;
+  padding: 1rem;
+
+  p{
+    font-size: 12px;
+    margin-bottom: 0.5em;
+  }
+}
+
+//CHART COMPONENT
+.chart-container{
+  background-color: $ltOrange;
+  height: 500px;
+  margin: 1rem 0;
+}
