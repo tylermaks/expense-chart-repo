@@ -16,12 +16,29 @@ body {
 
 section {
   border-radius: 15px;
-  max-width: 500px;
+  padding: 1rem;
+  max-width: 400px;
   width: 100%;
-  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.5rem;
 }
 
@@ -37,7 +54,6 @@ section {
           justify-content: space-between;
   background-color: #ec775f;
   color: #fffaf5;
-  padding: 1rem;
 }
 
 .balance-container p {
@@ -47,7 +63,87 @@ section {
 
 .chart-container {
   background-color: #fffaf5;
-  height: 500px;
-  margin: 1rem 0;
+  color: #382314;
+  margin: 1rem auto;
+}
+
+.bar-graph {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  margin: 1.5rem 0;
+  height: 250px;
+  width: 100%;
+}
+
+.bar-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 250px;
+}
+
+.bar {
+  background-color: #ec775f;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  max-height: 200px;
+  width: 85%;
+}
+
+.amount {
+  display: none;
+  background-color: #382314;
+  border-radius: 5px;
+  color: #f8e9dd;
+  font-size: 12px;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 100%;
+}
+
+.day {
+  margin-top: 1em;
+}
+
+.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 2px solid #f8e9dd;
+  padding-top: 1.5rem;
+}
+
+.summary-info {
+  width: 50%;
+}
+
+.summary-info--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=App.css.map */

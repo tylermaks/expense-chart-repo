@@ -24,15 +24,23 @@ body{
 
 section{
   border-radius: 15px;
-  max-width: 500px;
+  padding: 1rem;
+  max-width: 400px;
   width: 100%;
-  margin:0 auto;
+}
+
+//TEXT & REUSABLES
+h1{
+  font-size: 2rem;
 }
 
 //APP COMPONENT
 .App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 1.5rem;
-
 }
 
 //BALANCE COMPONENT
@@ -43,7 +51,6 @@ section{
 
   background-color: $ltRed;
   color: $ltOrange;
-  padding: 1rem;
 
   p{
     font-size: 12px;
@@ -54,6 +61,73 @@ section{
 //CHART COMPONENT
 .chart-container{
   background-color: $ltOrange;
-  height: 500px;
-  margin: 1rem 0;
+  color:$dkBrown;
+  margin: 1rem auto;
 }
+
+//CHART COMPONENT --- BAR GRAPH
+.bar-graph{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap:5px;
+
+  margin: 1.5rem 0;
+  height: 250px;
+  width: 100%;
+}
+
+.bar-area{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  height:250px;
+}
+
+.bar{
+  background-color: $ltRed;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  max-height: 200px;
+  width: 85%;
+}
+
+.amount{
+  display: none;
+
+  background-color: $dkBrown;
+  border-radius: 5px;
+  color:$cream;
+  font-size: 12px;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 100%;
+}
+
+.day{
+  margin-top: 1em;
+}
+
+
+
+//CHART COMPONENT --- SUMMARY
+.summary{
+  display: flex;
+  border-top: 2px solid $cream;
+  padding-top: 1.5rem;
+}
+
+.summary-info{
+  width: 50%;
+
+  &--right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+
