@@ -31,7 +31,7 @@ function Chart() {
             <div className="bar-graph">
                 {Reports.map(report => {
                     return(
-                        <div onMouseEnter={() => {handleHover(); handleSelect(report)}} onMouseLeave={handleLeave} style={{opacity: selected === report ? 0.75 : 1}} className="bar-area">
+                        <div onMouseEnter={() => {handleHover(); handleSelect(report)}} onMouseLeave={handleLeave} style={{opacity: selected === report ? 0.75 : 1}} className="bar-area col-center">
                             <div className="amount" style={{display: selected === report ? visible : null}}>${report.amount}</div>
                             <div className="bar" style={{height: report.amount*3.5, background: largestBar() === report.amount ? "hsl(186, 34%, 60%)" : null}}></div>
                             <p className="day">{report.day}</p>
@@ -44,7 +44,7 @@ function Chart() {
                     <p>Total this month</p>
                     <h1>$478.33</h1>
                 </article>
-                <article className="summary-info summary-info--right">
+                <article className="summary-info summary-info--right col-center">
                     <h4>+2.4%</h4>
                     <p>from last month</p>
                 </article>
