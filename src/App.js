@@ -5,10 +5,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App col-center">
+    <main className="App col-center">
       <Balance />
       <Chart />
-    </div>
+    </main>
   );
 }
 

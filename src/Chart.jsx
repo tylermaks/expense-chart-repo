@@ -19,6 +19,7 @@ function Chart() {
         setSelected(null)
     }
 
+
     const largestBar = () =>{
         let barNum = Math.max(...Reports.map(obj => obj.amount))
         return barNum
@@ -30,10 +31,22 @@ function Chart() {
             <h2 onClick={largestBar} className="title">Spending - Last 7 Days</h2>
             <div className="bar-graph">
                 {Reports.map(report => {
+
+                    const opacityValue = selected === report ? 0.75 : 1;
+                    const visibility = selected === report ? visible : null;
+                    const heightValue = report.amount*3.5;
+                    const cyanHighlight = largestBar() === report.amount ? "hsl(186, 34%, 60%)" : null
+
                     return(
-                        <div onMouseEnter={() => {handleHover(); handleSelect(report)}} onMouseLeave={handleLeave} style={{opacity: selected === report ? 0.75 : 1}} className="bar-area col-center">
-                            <div className="amount" style={{display: selected === report ? visible : null}}>${report.amount}</div>
-                            <div className="bar" style={{height: report.amount*3.5, background: largestBar() === report.amount ? "hsl(186, 34%, 60%)" : null}}></div>
+
+                        <div 
+                            onMouseEnter={() => {handleHover(); handleSelect(report)}} 
+                            onMouseLeave={handleLeave} 
+                            style={{opacity: opacityValue}}
+                            className="bar-area col-center"
+                        >
+                            <div className="amount" style={{display: visibility }}>${report.amount}</div>
+                            <div className="bar" style={{height: heightValue, background: cyanHighlight}}></div>
                             <p className="day">{report.day}</p>
                         </div>
                     )
